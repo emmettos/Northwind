@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "ihsV+pDm8IgzOg8Zn3FZ6bZRCRUUoMRqAKEnVpRaKmj1+HTri2YOBRT2KKdir88Kes1UXisg0t2c+JZPN4CcmQ==",
+  "success": true,
+  "projectFilePath": "c:\\Users\\120013\\source\\repos\\Northwind\\src\\EoSoftware.Northwind.SharedKernel\\EoSoftware.Northwind.SharedKernel.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\120013\\.nuget\\packages\\ardalis.specification\\6.0.1\\ardalis.specification.6.0.1.nupkg.sha512",
+    "C:\\Users\\120013\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
+    "C:\\Users\\120013\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

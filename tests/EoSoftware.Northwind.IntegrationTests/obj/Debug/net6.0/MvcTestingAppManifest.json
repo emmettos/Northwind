@@ -1,0 +1,6 @@
+{
+  "EoSoftware.Northwind.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "c:\\Users\\120013\\source\\repos\\Northwind\\src\\EoSoftware.Northwind.Core",
+  "EoSoftware.Northwind.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "c:\\Users\\120013\\source\\repos\\Northwind\\src\\EoSoftware.Northwind.Infrastructure",
+  "EoSoftware.Northwind.SharedKernel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "c:\\Users\\120013\\source\\repos\\Northwind\\src\\EoSoftware.Northwind.SharedKernel",
+  "EoSoftware.Northwind.UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "c:\\Users\\120013\\source\\repos\\Northwind\\tests\\EoSoftware.Northwind.UnitTests"
+}
