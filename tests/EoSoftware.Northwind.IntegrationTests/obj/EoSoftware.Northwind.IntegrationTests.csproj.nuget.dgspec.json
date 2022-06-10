@@ -1,26 +1,22 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\120013\\source\\repos\\Northwind\\tests\\EoSoftware.Northwind.IntegrationTests\\EoSoftware.Northwind.IntegrationTests.csproj": {}
+    "c:\\Users\\120013\\Source\\Repos\\Northwind\\tests\\EoSoftware.Northwind.IntegrationTests\\EoSoftware.Northwind.IntegrationTests.csproj": {}
   },
   "projects": {
-    "c:\\Users\\120013\\source\\repos\\Northwind\\src\\EoSoftware.Northwind.Core\\EoSoftware.Northwind.Core.csproj": {
+    "c:\\Users\\120013\\Source\\Repos\\Northwind\\src\\EoSoftware.Northwind.Core\\EoSoftware.Northwind.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\120013\\source\\repos\\Northwind\\src\\EoSoftware.Northwind.Core\\EoSoftware.Northwind.Core.csproj",
+        "projectUniqueName": "c:\\Users\\120013\\Source\\Repos\\Northwind\\src\\EoSoftware.Northwind.Core\\EoSoftware.Northwind.Core.csproj",
         "projectName": "EoSoftware.Northwind.Core",
-        "projectPath": "c:\\Users\\120013\\source\\repos\\Northwind\\src\\EoSoftware.Northwind.Core\\EoSoftware.Northwind.Core.csproj",
+        "projectPath": "c:\\Users\\120013\\Source\\Repos\\Northwind\\src\\EoSoftware.Northwind.Core\\EoSoftware.Northwind.Core.csproj",
         "packagesPath": "C:\\Users\\120013\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\120013\\source\\repos\\Northwind\\src\\EoSoftware.Northwind.Core\\obj\\",
+        "outputPath": "c:\\Users\\120013\\Source\\Repos\\Northwind\\src\\EoSoftware.Northwind.Core\\obj\\",
         "projectStyle": "PackageReference",
         "centralPackageVersionsManagementEnabled": true,
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "c:\\Users\\120013\\source\\repos\\Northwind\\NuGet.Config",
-          "C:\\Users\\120013\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "c:\\Users\\120013\\Source\\Repos\\Northwind\\NuGet.Config",
+          "C:\\Users\\120013\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -32,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "c:\\Users\\120013\\source\\repos\\Northwind\\src\\EoSoftware.Northwind.SharedKernel\\EoSoftware.Northwind.SharedKernel.csproj": {
-                "projectPath": "c:\\Users\\120013\\source\\repos\\Northwind\\src\\EoSoftware.Northwind.SharedKernel\\EoSoftware.Northwind.SharedKernel.csproj"
+              "c:\\Users\\120013\\Source\\Repos\\Northwind\\src\\EoSoftware.Northwind.SharedKernel\\EoSoftware.Northwind.SharedKernel.csproj": {
+                "projectPath": "c:\\Users\\120013\\Source\\Repos\\Northwind\\src\\EoSoftware.Northwind.SharedKernel\\EoSoftware.Northwind.SharedKernel.csproj"
               }
             }
           }
@@ -132,23 +128,19 @@
         }
       }
     },
-    "c:\\Users\\120013\\source\\repos\\Northwind\\src\\EoSoftware.Northwind.Infrastructure\\EoSoftware.Northwind.Infrastructure.csproj": {
+    "c:\\Users\\120013\\Source\\Repos\\Northwind\\src\\EoSoftware.Northwind.Infrastructure\\EoSoftware.Northwind.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\120013\\source\\repos\\Northwind\\src\\EoSoftware.Northwind.Infrastructure\\EoSoftware.Northwind.Infrastructure.csproj",
+        "projectUniqueName": "c:\\Users\\120013\\Source\\Repos\\Northwind\\src\\EoSoftware.Northwind.Infrastructure\\EoSoftware.Northwind.Infrastructure.csproj",
         "projectName": "EoSoftware.Northwind.Infrastructure",
-        "projectPath": "c:\\Users\\120013\\source\\repos\\Northwind\\src\\EoSoftware.Northwind.Infrastructure\\EoSoftware.Northwind.Infrastructure.csproj",
+        "projectPath": "c:\\Users\\120013\\Source\\Repos\\Northwind\\src\\EoSoftware.Northwind.Infrastructure\\EoSoftware.Northwind.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\120013\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\120013\\source\\repos\\Northwind\\src\\EoSoftware.Northwind.Infrastructure\\obj\\",
+        "outputPath": "c:\\Users\\120013\\Source\\Repos\\Northwind\\src\\EoSoftware.Northwind.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "centralPackageVersionsManagementEnabled": true,
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "c:\\Users\\120013\\source\\repos\\Northwind\\NuGet.Config",
-          "C:\\Users\\120013\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "c:\\Users\\120013\\Source\\Repos\\Northwind\\NuGet.Config",
+          "C:\\Users\\120013\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -160,11 +152,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "c:\\Users\\120013\\source\\repos\\Northwind\\src\\EoSoftware.Northwind.Core\\EoSoftware.Northwind.Core.csproj": {
-                "projectPath": "c:\\Users\\120013\\source\\repos\\Northwind\\src\\EoSoftware.Northwind.Core\\EoSoftware.Northwind.Core.csproj"
+              "c:\\Users\\120013\\Source\\Repos\\Northwind\\src\\EoSoftware.Northwind.Core\\EoSoftware.Northwind.Core.csproj": {
+                "projectPath": "c:\\Users\\120013\\Source\\Repos\\Northwind\\src\\EoSoftware.Northwind.Core\\EoSoftware.Northwind.Core.csproj"
               },
-              "c:\\Users\\120013\\source\\repos\\Northwind\\src\\EoSoftware.Northwind.SharedKernel\\EoSoftware.Northwind.SharedKernel.csproj": {
-                "projectPath": "c:\\Users\\120013\\source\\repos\\Northwind\\src\\EoSoftware.Northwind.SharedKernel\\EoSoftware.Northwind.SharedKernel.csproj"
+              "c:\\Users\\120013\\Source\\Repos\\Northwind\\src\\EoSoftware.Northwind.SharedKernel\\EoSoftware.Northwind.SharedKernel.csproj": {
+                "projectPath": "c:\\Users\\120013\\Source\\Repos\\Northwind\\src\\EoSoftware.Northwind.SharedKernel\\EoSoftware.Northwind.SharedKernel.csproj"
               }
             }
           }
@@ -274,23 +266,19 @@
         }
       }
     },
-    "c:\\Users\\120013\\source\\repos\\Northwind\\src\\EoSoftware.Northwind.SharedKernel\\EoSoftware.Northwind.SharedKernel.csproj": {
+    "c:\\Users\\120013\\Source\\Repos\\Northwind\\src\\EoSoftware.Northwind.SharedKernel\\EoSoftware.Northwind.SharedKernel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\120013\\source\\repos\\Northwind\\src\\EoSoftware.Northwind.SharedKernel\\EoSoftware.Northwind.SharedKernel.csproj",
+        "projectUniqueName": "c:\\Users\\120013\\Source\\Repos\\Northwind\\src\\EoSoftware.Northwind.SharedKernel\\EoSoftware.Northwind.SharedKernel.csproj",
         "projectName": "EoSoftware.Northwind.SharedKernel",
-        "projectPath": "c:\\Users\\120013\\source\\repos\\Northwind\\src\\EoSoftware.Northwind.SharedKernel\\EoSoftware.Northwind.SharedKernel.csproj",
+        "projectPath": "c:\\Users\\120013\\Source\\Repos\\Northwind\\src\\EoSoftware.Northwind.SharedKernel\\EoSoftware.Northwind.SharedKernel.csproj",
         "packagesPath": "C:\\Users\\120013\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\120013\\source\\repos\\Northwind\\src\\EoSoftware.Northwind.SharedKernel\\obj\\",
+        "outputPath": "c:\\Users\\120013\\Source\\Repos\\Northwind\\src\\EoSoftware.Northwind.SharedKernel\\obj\\",
         "projectStyle": "PackageReference",
         "centralPackageVersionsManagementEnabled": true,
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "c:\\Users\\120013\\source\\repos\\Northwind\\NuGet.Config",
-          "C:\\Users\\120013\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "c:\\Users\\120013\\Source\\Repos\\Northwind\\NuGet.Config",
+          "C:\\Users\\120013\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -378,23 +366,19 @@
         }
       }
     },
-    "c:\\Users\\120013\\source\\repos\\Northwind\\tests\\EoSoftware.Northwind.IntegrationTests\\EoSoftware.Northwind.IntegrationTests.csproj": {
+    "c:\\Users\\120013\\Source\\Repos\\Northwind\\tests\\EoSoftware.Northwind.IntegrationTests\\EoSoftware.Northwind.IntegrationTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\120013\\source\\repos\\Northwind\\tests\\EoSoftware.Northwind.IntegrationTests\\EoSoftware.Northwind.IntegrationTests.csproj",
+        "projectUniqueName": "c:\\Users\\120013\\Source\\Repos\\Northwind\\tests\\EoSoftware.Northwind.IntegrationTests\\EoSoftware.Northwind.IntegrationTests.csproj",
         "projectName": "EoSoftware.Northwind.IntegrationTests",
-        "projectPath": "c:\\Users\\120013\\source\\repos\\Northwind\\tests\\EoSoftware.Northwind.IntegrationTests\\EoSoftware.Northwind.IntegrationTests.csproj",
+        "projectPath": "c:\\Users\\120013\\Source\\Repos\\Northwind\\tests\\EoSoftware.Northwind.IntegrationTests\\EoSoftware.Northwind.IntegrationTests.csproj",
         "packagesPath": "C:\\Users\\120013\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\120013\\source\\repos\\Northwind\\tests\\EoSoftware.Northwind.IntegrationTests\\obj\\",
+        "outputPath": "c:\\Users\\120013\\Source\\Repos\\Northwind\\tests\\EoSoftware.Northwind.IntegrationTests\\obj\\",
         "projectStyle": "PackageReference",
         "centralPackageVersionsManagementEnabled": true,
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "c:\\Users\\120013\\source\\repos\\Northwind\\NuGet.Config",
-          "C:\\Users\\120013\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "c:\\Users\\120013\\Source\\Repos\\Northwind\\NuGet.Config",
+          "C:\\Users\\120013\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -406,11 +390,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "c:\\Users\\120013\\source\\repos\\Northwind\\src\\EoSoftware.Northwind.Infrastructure\\EoSoftware.Northwind.Infrastructure.csproj": {
-                "projectPath": "c:\\Users\\120013\\source\\repos\\Northwind\\src\\EoSoftware.Northwind.Infrastructure\\EoSoftware.Northwind.Infrastructure.csproj"
+              "c:\\Users\\120013\\Source\\Repos\\Northwind\\src\\EoSoftware.Northwind.Infrastructure\\EoSoftware.Northwind.Infrastructure.csproj": {
+                "projectPath": "c:\\Users\\120013\\Source\\Repos\\Northwind\\src\\EoSoftware.Northwind.Infrastructure\\EoSoftware.Northwind.Infrastructure.csproj"
               },
-              "c:\\Users\\120013\\source\\repos\\Northwind\\tests\\EoSoftware.Northwind.UnitTests\\EoSoftware.Northwind.UnitTests.csproj": {
-                "projectPath": "c:\\Users\\120013\\source\\repos\\Northwind\\tests\\EoSoftware.Northwind.UnitTests\\EoSoftware.Northwind.UnitTests.csproj"
+              "c:\\Users\\120013\\Source\\Repos\\Northwind\\tests\\EoSoftware.Northwind.UnitTests\\EoSoftware.Northwind.UnitTests.csproj": {
+                "projectPath": "c:\\Users\\120013\\Source\\Repos\\Northwind\\tests\\EoSoftware.Northwind.UnitTests\\EoSoftware.Northwind.UnitTests.csproj"
               }
             }
           }
@@ -513,23 +497,19 @@
         }
       }
     },
-    "c:\\Users\\120013\\source\\repos\\Northwind\\tests\\EoSoftware.Northwind.UnitTests\\EoSoftware.Northwind.UnitTests.csproj": {
+    "c:\\Users\\120013\\Source\\Repos\\Northwind\\tests\\EoSoftware.Northwind.UnitTests\\EoSoftware.Northwind.UnitTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\120013\\source\\repos\\Northwind\\tests\\EoSoftware.Northwind.UnitTests\\EoSoftware.Northwind.UnitTests.csproj",
+        "projectUniqueName": "c:\\Users\\120013\\Source\\Repos\\Northwind\\tests\\EoSoftware.Northwind.UnitTests\\EoSoftware.Northwind.UnitTests.csproj",
         "projectName": "EoSoftware.Northwind.UnitTests",
-        "projectPath": "c:\\Users\\120013\\source\\repos\\Northwind\\tests\\EoSoftware.Northwind.UnitTests\\EoSoftware.Northwind.UnitTests.csproj",
+        "projectPath": "c:\\Users\\120013\\Source\\Repos\\Northwind\\tests\\EoSoftware.Northwind.UnitTests\\EoSoftware.Northwind.UnitTests.csproj",
         "packagesPath": "C:\\Users\\120013\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\120013\\source\\repos\\Northwind\\tests\\EoSoftware.Northwind.UnitTests\\obj\\",
+        "outputPath": "c:\\Users\\120013\\Source\\Repos\\Northwind\\tests\\EoSoftware.Northwind.UnitTests\\obj\\",
         "projectStyle": "PackageReference",
         "centralPackageVersionsManagementEnabled": true,
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "c:\\Users\\120013\\source\\repos\\Northwind\\NuGet.Config",
-          "C:\\Users\\120013\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "c:\\Users\\120013\\Source\\Repos\\Northwind\\NuGet.Config",
+          "C:\\Users\\120013\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -541,8 +521,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "c:\\Users\\120013\\source\\repos\\Northwind\\src\\EoSoftware.Northwind.Core\\EoSoftware.Northwind.Core.csproj": {
-                "projectPath": "c:\\Users\\120013\\source\\repos\\Northwind\\src\\EoSoftware.Northwind.Core\\EoSoftware.Northwind.Core.csproj"
+              "c:\\Users\\120013\\Source\\Repos\\Northwind\\src\\EoSoftware.Northwind.Core\\EoSoftware.Northwind.Core.csproj": {
+                "projectPath": "c:\\Users\\120013\\Source\\Repos\\Northwind\\src\\EoSoftware.Northwind.Core\\EoSoftware.Northwind.Core.csproj"
               }
             }
           }

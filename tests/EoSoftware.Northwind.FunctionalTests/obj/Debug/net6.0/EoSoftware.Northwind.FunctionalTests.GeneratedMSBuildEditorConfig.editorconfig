@@ -7,4 +7,4 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = EoSoftware.Northwind.FunctionalTests
-build_property.ProjectDir = c:\Users\120013\source\repos\Northwind\tests\EoSoftware.Northwind.FunctionalTests\
+build_property.ProjectDir = c:\Users\120013\Source\Repos\Northwind\tests\EoSoftware.Northwind.FunctionalTests\
