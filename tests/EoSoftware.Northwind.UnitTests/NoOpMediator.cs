@@ -20,9 +20,9 @@ public class NoOpMediator : IMediator
     return Task.FromResult<TResponse>(default);
   }
 
-  public Task<object?> Send(object request, CancellationToken cancellationToken = default)
+  public Task<object> Send(object request, CancellationToken cancellationToken = default)
   {
-    return Task.FromResult<object?>(default);
+    return Task.FromResult<object>(default);
   }
 
   public async IAsyncEnumerable<TResponse> CreateStream<TResponse>(IStreamRequest<TResponse> request,
@@ -32,7 +32,7 @@ public class NoOpMediator : IMediator
     yield break;
   }
 
-  public async IAsyncEnumerable<object?> CreateStream(object request,
+  public async IAsyncEnumerable<object> CreateStream(object request,
     [EnumeratorCancellation] CancellationToken cancellationToken = default)
   {
     await Task.CompletedTask;

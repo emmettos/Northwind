@@ -12,7 +12,7 @@ public class IncompleteModel : PageModel
 {
   private readonly IRepository<Project> _repository;
 
-  public List<ToDoItem>? ToDoItems { get; set; }
+  public List<ToDoItem> ToDoItems { get; set; }
 
   public IncompleteModel(IRepository<Project> repository)
   {

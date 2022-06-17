@@ -7,7 +7,7 @@ public class ProjectConstructor
 {
   private string _testName = "test name";
   private PriorityStatus _testPriority = PriorityStatus.Backlog;
-  private Project? _testProject;
+  private Project _testProject;
 
   private Project CreateProject()
   {

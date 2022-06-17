@@ -17,7 +17,7 @@ public class IndexModel : PageModel
   public int ProjectId { get; set; }
   public string Message { get; set; } = "";
 
-  public ProjectDTO? Project { get; set; }
+  public ProjectDTO Project { get; set; }
 
   public IndexModel(IRepository<Project> repository)
   {
