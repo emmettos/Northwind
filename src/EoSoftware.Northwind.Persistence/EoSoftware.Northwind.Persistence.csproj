@@ -12,5 +12,8 @@
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL.Design" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EoSoftware.Northwind.Domain\EoSoftware.Northwind.Domain.csproj" />
+  </ItemGroup>
 
 </Project>
