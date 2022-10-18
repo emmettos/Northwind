@@ -2,7 +2,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
-namespace EoSoftware.Northwind.Interfaces
+namespace EoSoftware.Northwind.Application.Interfaces
 {
     public interface INorthwindDbContext
     {

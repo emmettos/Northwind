@@ -11,9 +11,11 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL.Design" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EoSoftware.Northwind.Domain\EoSoftware.Northwind.Domain.csproj" />
+    <ProjectReference Include="..\EoSoftware.Northwind.Application\EoSoftware.Northwind.Application.csproj" />
   </ItemGroup>
 
 </Project>

@@ -8,5 +8,6 @@
     <PackageVersion Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.10" />
     <PackageVersion Include="Npgsql.EntityFrameworkCore.PostgreSQL.Design" Version="1.1.0" />
     <PackageVersion Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.10" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.10" />
   </ItemGroup>
 </Project>
