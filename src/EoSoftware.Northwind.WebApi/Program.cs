@@ -1,6 +1,13 @@
+using Microsoft.EntityFrameworkCore;
+using EoSoftware.Northwind.Persistence;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddDbContext<NorthwindDbContext>(options => 
+{
+    options.UseNpgsql(builder.Configuration.GetConnectionString("NorthwindDbContext"));
+});
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
