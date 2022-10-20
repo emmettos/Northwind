@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using EoSoftware.Northwind.Application.Interfaces;
+using EoSoftware.Northwind.Domain.Entities;
 
 namespace EoSoftware.Northwind.Persistence
 {

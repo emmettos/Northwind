@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using EoSoftware.Northwind.Application.Interfaces;
 using EoSoftware.Northwind.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +9,7 @@ builder.Services.AddDbContext<NorthwindDbContext>(options =>
 {
     options.UseNpgsql(builder.Configuration.GetConnectionString("NorthwindDbContext"));
 });
+builder.Services.AddScoped<INorthwindDbContext>(s => s.GetService<NorthwindDbContext>()!);
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

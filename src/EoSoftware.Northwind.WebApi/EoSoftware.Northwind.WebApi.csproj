@@ -14,6 +14,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EoSoftware.Northwind.Persistence\EoSoftware.Northwind.Persistence.csproj" />
+    <ProjectReference Include="..\EoSoftware.Northwind.Application\EoSoftware.Northwind.Application.csproj" />
+    <ProjectReference Include="..\EoSoftware.Northwind.Domain\EoSoftware.Northwind.Domain.csproj" />
   </ItemGroup>
 
 </Project>
