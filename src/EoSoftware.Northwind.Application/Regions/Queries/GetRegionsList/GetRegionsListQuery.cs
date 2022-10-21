@@ -4,9 +4,9 @@ using EoSoftware.Northwind.Domain;
 
 namespace EoSoftware.Northwind.Application;
 
-public class GetRegionsListQuery : IRequest<IList<RegionDto>>
+public class GetRegionsListQuery : IRequest<IEnumerable<RegionDto>>
 {
-    public class Handler : IRequestHandler<GetRegionsListQuery, IList<RegionDto>>
+    public class Handler : IRequestHandler<GetRegionsListQuery, IEnumerable<RegionDto>>
     {
         private readonly INorthwindDbContext _context;
 
@@ -15,7 +15,7 @@ public class GetRegionsListQuery : IRequest<IList<RegionDto>>
             _context = context;
         }
 
-        public async Task<IList<RegionDto>> Handle(GetRegionsListQuery request, CancellationToken cancellationToken)
+        public async Task<IEnumerable<RegionDto>> Handle(GetRegionsListQuery request, CancellationToken cancellationToken)
         {
             return  await _context.Set<Region>().Select(r => r.ToRegionDto()).ToListAsync(cancellationToken);
         }

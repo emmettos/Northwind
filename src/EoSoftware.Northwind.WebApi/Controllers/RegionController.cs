@@ -1,7 +1,6 @@
-using Microsoft.EntityFrameworkCore;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using EoSoftware.Northwind.Application;
-using EoSoftware.Northwind.Domain;
 
 namespace EoSoftware.Northwind.WebApi.Controllers;
 
@@ -9,16 +8,16 @@ namespace EoSoftware.Northwind.WebApi.Controllers;
 [Route("api/region")]
 public class RegionController : ControllerBase
 {
-    private INorthwindDbContext _context;
+    private readonly IMediator _mediator;
 
-    public RegionController(INorthwindDbContext context)
+    public RegionController(IMediator mediator)
     {
-        _context = context;
+        _mediator = mediator;
     }
 
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<Region>>> GetRegions()
+    public async Task<IEnumerable<RegionDto>> GetRegions()
     {
-        return await _context.Set<Region>().ToListAsync();
+        return await _mediator.Send(new GetRegionsListQuery());
     }
 }
