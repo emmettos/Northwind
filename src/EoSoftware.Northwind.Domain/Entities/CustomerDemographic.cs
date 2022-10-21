@@ -1,18 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿namespace EoSoftware.Northwind.Domain;
 
-namespace EoSoftware.Northwind.Domain.Entities
+public class CustomerDemographic
 {
-    public class CustomerDemographic
+    public CustomerDemographic()
     {
-        public CustomerDemographic()
-        {
-            Customers = new HashSet<Customer>();
-        }
-
-        public char CustomerTypeId { get; set; }
-        public string? CustomerDesc { get; set; }
-
-        public virtual ICollection<Customer> Customers { get; set; }
+        Customers = new HashSet<Customer>();
     }
+
+    public char CustomerTypeId { get; set; }
+    public string? CustomerDesc { get; set; }
+
+    public virtual ICollection<Customer> Customers { get; set; }
 }

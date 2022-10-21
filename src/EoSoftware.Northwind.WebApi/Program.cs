@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using EoSoftware.Northwind.Application.Interfaces;
+using EoSoftware.Northwind.Application;
 using EoSoftware.Northwind.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);

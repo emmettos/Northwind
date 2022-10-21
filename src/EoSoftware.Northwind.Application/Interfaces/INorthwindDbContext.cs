@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace EoSoftware.Northwind.Application.Interfaces
+namespace EoSoftware.Northwind.Application
 {
     public interface INorthwindDbContext
     {

@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
-using EoSoftware.Northwind.Application.Interfaces;
-using EoSoftware.Northwind.Domain.Entities;
+using EoSoftware.Northwind.Application;
+using EoSoftware.Northwind.Domain;
 
 namespace EoSoftware.Northwind.WebApi.Controllers;
 

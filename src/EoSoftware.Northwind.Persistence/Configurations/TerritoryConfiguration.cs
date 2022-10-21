@@ -1,30 +1,29 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using EoSoftware.Northwind.Domain.Entities;
+using EoSoftware.Northwind.Domain;
 
-namespace Northwind.Persistence.Configurations
+namespace EoSoftware.Northwind.Persistence;
+
+public class TerritoryConfiguration : IEntityTypeConfiguration<Territory>
 {
-    public class TerritoryConfiguration : IEntityTypeConfiguration<Territory>
+    public void Configure(EntityTypeBuilder<Territory> builder)
     {
-        public void Configure(EntityTypeBuilder<Territory> builder)
-        {
-            builder.ToTable("territories");
+        builder.ToTable("territories");
 
-            builder.Property(e => e.TerritoryId)
-                .HasMaxLength(20)
-                .HasColumnName("territory_id");
+        builder.Property(e => e.TerritoryId)
+            .HasMaxLength(20)
+            .HasColumnName("territory_id");
 
-            builder.Property(e => e.RegionId).HasColumnName("region_id");
+        builder.Property(e => e.RegionId).HasColumnName("region_id");
 
-            builder.Property(e => e.TerritoryDescription)
-                .HasColumnType("char")
-                .HasColumnName("territory_description");
+        builder.Property(e => e.TerritoryDescription)
+            .HasColumnType("char")
+            .HasColumnName("territory_description");
 
-            builder.HasOne(d => d.Region)
-                .WithMany(p => p.Territories)
-                .HasForeignKey(d => d.RegionId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("fk_territories_region");
-        }
+        builder.HasOne(d => d.Region)
+            .WithMany(p => p.Territories)
+            .HasForeignKey(d => d.RegionId)
+            .OnDelete(DeleteBehavior.ClientSetNull)
+            .HasConstraintName("fk_territories_region");
     }
 }
