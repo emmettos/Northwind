@@ -1,11 +1,20 @@
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 using EoSoftware.Northwind.Application;
 using EoSoftware.Northwind.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Host.UseSerilog((context, services, configuration) => 
+{   
+    configuration
+        .ReadFrom.Configuration(context.Configuration)
+        .ReadFrom.Services(services)
+        .Enrich.FromLogContext();
+});
+
 builder.Services.AddDbContext<NorthwindDbContext>(options => 
 {
     options.UseNpgsql(builder.Configuration.GetConnectionString("NorthwindDbContext"));
@@ -15,6 +24,7 @@ builder.Services.AddScoped<INorthwindDbContext>(s => s.GetService<NorthwindDbCon
 builder.Services.AddMediatR(typeof(GetRegionsListQuery).Assembly);
 
 builder.Services.AddControllers();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -27,6 +37,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseSerilogRequestLogging(configure =>
+{
+    configure.MessageTemplate = "HTTP {RequestMethod} {RequestPath} ({UserId}) responded {StatusCode} in {Elapsed:0.0000}ms";
+}); 
+//app.UseSerilogRequestLogging(); 
 
 app.UseHttpsRedirection();
 
