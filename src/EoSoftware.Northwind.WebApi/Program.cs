@@ -1,5 +1,6 @@
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using Hellang.Middleware.ProblemDetails;
 using Serilog;
 using EoSoftware.Northwind.Application;
 using EoSoftware.Northwind.Persistence;
@@ -14,6 +15,8 @@ builder.Host.UseSerilog((context, services, configuration) =>
         .ReadFrom.Services(services)
         .Enrich.FromLogContext();
 });
+
+builder.Services.AddProblemDetails();
 
 builder.Services.AddDbContext<NorthwindDbContext>(options => 
 {
@@ -32,15 +35,20 @@ builder.Services.AddSwaggerGen();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment())
+{
+    app.UseProblemDetails();
+}
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
-app.UseSerilogRequestLogging(configure =>
+app.UseSerilogRequestLogging(options =>
 {
-    configure.MessageTemplate = "HTTP {RequestMethod} {RequestPath} ({UserId}) responded {StatusCode} in {Elapsed:0.0000}ms";
+    options.MessageTemplate = "HTTP {RequestMethod} {RequestPath} ({UserId}) responded {StatusCode} in {Elapsed:0.0000}ms";
 }); 
 //app.UseSerilogRequestLogging(); 
 

@@ -16,8 +16,10 @@ public class RegionController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<IEnumerable<RegionDto>> GetRegions()
+    public async Task<ActionResult<IEnumerable<RegionDto>>> GetRegions()
     {
-        return await _mediator.Send(new GetRegionsListQuery());
+        var regions = await _mediator.Send(new GetRegionsListQuery());
+
+        return Ok(regions);
     }
 }

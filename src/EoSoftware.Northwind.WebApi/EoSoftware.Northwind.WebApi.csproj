@@ -14,6 +14,7 @@
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" />
     <PackageReference Include="Serilog" />
     <PackageReference Include="Serilog.AspNetCore" />
+    <PackageReference Include="Hellang.Middleware.ProblemDetails" />
   </ItemGroup>
 
   <ItemGroup>
