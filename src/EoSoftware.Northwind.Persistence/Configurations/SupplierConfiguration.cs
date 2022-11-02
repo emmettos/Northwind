@@ -11,8 +11,8 @@ public class SupplierConfiguration : IEntityTypeConfiguration<Supplier>
         builder.ToTable("suppliers");
 
         builder.Property(e => e.SupplierId)
-            .ValueGeneratedNever()
-            .HasColumnName("supplier_id");
+            .HasColumnName("supplier_id")
+            .UseIdentityAlwaysColumn();
 
         builder.Property(e => e.Address)
             .HasMaxLength(60)
