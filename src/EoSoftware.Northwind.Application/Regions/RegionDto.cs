@@ -1,7 +1,11 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace EoSoftware.Northwind.Application;
 
 public class RegionDto
-{
-    public int Id { get; set; }
+{   [Required]
+    [Range(1, 999999999)]
+    public short? Id { get; set; }
+
     public string Description { get; set; } = null!;
 }

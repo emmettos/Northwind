@@ -13,5 +13,7 @@ public class NewCategoryDto
 
 public class CategoryDto : NewCategoryDto
 {
-    public short Id { get; set; }
+    [Required]
+    [Range(1, 999999999)]
+    public short? Id { get; set; }
 }

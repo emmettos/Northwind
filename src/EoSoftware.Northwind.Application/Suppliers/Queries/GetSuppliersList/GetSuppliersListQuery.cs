@@ -17,7 +17,10 @@ public class GetSuppliersListQuery : IRequest<IEnumerable<SupplierDto>>
 
         public async Task<IEnumerable<SupplierDto>> Handle(GetSuppliersListQuery request, CancellationToken cancellationToken)
         {
-            return  await _context.Set<Supplier>().Select(s => s.ToSupplierDto()).ToListAsync(cancellationToken);
+            return  await _context.Set<Supplier>()
+                .AsNoTracking()
+                .Select(s => s.ToSupplierDto())
+                .ToListAsync(cancellationToken);
         }
     }
 }

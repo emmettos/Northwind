@@ -22,4 +22,14 @@ public static class CategoryAdapters
             Description = newCategoryDto.Description,
         };
     }
+
+    public static Category ToCategory(this CategoryDto categoryDto)
+    {
+        return new Category
+        { 
+            CategoryId = categoryDto.Id!.Value,
+            CategoryName = categoryDto.Name,
+            Description = categoryDto.Description,
+        };
+    }
 }

@@ -48,4 +48,12 @@ public class CategoryController : ControllerBase
 
         return CreatedAtAction("GetCategory", new { Id = createdCategoryDto.Id }, createdCategoryDto);
     }
+
+    [HttpPut]
+    public async Task<IActionResult> UpdateCategoryAsync(CategoryDto updatedCategoryDto)
+    {
+        await _mediator.Send(new UpdateCategoryCommand { CategoryDto = updatedCategoryDto });
+
+        return new NoContentResult();
+    }
 }

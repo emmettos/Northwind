@@ -21,5 +21,7 @@ public class NewSupplierDto
 
 public class SupplierDto : NewSupplierDto
 {
-    public short Id { get; set; }
+    [Required]
+    [Range(1, 999999999)]
+    public short? Id { get; set; }
 }

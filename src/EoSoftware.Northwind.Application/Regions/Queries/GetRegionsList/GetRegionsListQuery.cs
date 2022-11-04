@@ -17,7 +17,10 @@ public class GetRegionsListQuery : IRequest<IEnumerable<RegionDto>>
 
         public async Task<IEnumerable<RegionDto>> Handle(GetRegionsListQuery request, CancellationToken cancellationToken)
         {
-            return  await _context.Set<Region>().Select(r => r.ToRegionDto()).ToListAsync(cancellationToken);
+            return  await _context.Set<Region>()
+                .AsNoTracking()
+                .Select(r => r.ToRegionDto())
+                .ToListAsync(cancellationToken);
         }
     }
 }
