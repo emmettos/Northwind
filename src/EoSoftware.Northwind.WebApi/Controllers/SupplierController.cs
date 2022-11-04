@@ -48,4 +48,12 @@ public class SupplierController : ControllerBase
 
         return CreatedAtAction("GetSupplier", new { Id = createdSupplierDto.Id }, createdSupplierDto);
     }
+
+    [HttpPut]
+    public async Task<IActionResult> UpdateSupplierAsync(SupplierDto updatedSupplierDto)
+    {
+        await _mediator.Send(new UpdateSupplierCommand { SupplierDto = updatedSupplierDto });
+
+        return new NoContentResult();
+    }
 }

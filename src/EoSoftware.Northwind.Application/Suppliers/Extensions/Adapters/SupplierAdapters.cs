@@ -40,4 +40,23 @@ public static class SupplierAdapters
             Homepage = newSupplierDto.Homepage
         };
     }
+
+    public static Supplier ToSupplier(this SupplierDto supplierDto)
+    {
+        return new Supplier
+        { 
+            SupplierId = supplierDto.Id!.Value,
+            CompanyName = supplierDto.CompanyName,
+            ContactName = supplierDto.ContactName,
+            ContactTitle = supplierDto.ContactTitle,
+            Address = supplierDto.Address,
+            City = supplierDto.City,
+            Region = supplierDto.Region,
+            PostalCode = supplierDto.PostalCode,
+            Country = supplierDto.Country,
+            Phone = supplierDto.Phone,
+            Fax = supplierDto.Fax,
+            Homepage = supplierDto.Homepage
+        };
+    }
 }
