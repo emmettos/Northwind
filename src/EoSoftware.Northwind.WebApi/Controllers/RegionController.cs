@@ -22,4 +22,32 @@ public class RegionController : ControllerBase
 
         return Ok(regions);
     }
+
+    public async Task<IActionResult> GetRegionAsync(short Id)
+    {
+        var regionDto = await _mediator.Send(new GetRegionQuery { Id = Id });
+
+        if (regionDto == null)
+        {
+            return NotFound();
+        }
+
+        return Ok(regionDto);
+    }
+
+    [HttpPost]
+    public async Task<ActionResult<RegionDto>> CreateRegionAsync(NewRegionDto newRegionDto)
+    {
+        var createdRegionDto = await _mediator.Send(new CreateRegionCommand { NewRegionDto = newRegionDto });
+
+        return CreatedAtAction("GetRegion", new { Id = createdRegionDto.Id }, createdRegionDto);
+    }
+
+    [HttpPut]
+    public async Task<IActionResult> UpdateRegionAsync(RegionDto updatedRegionDto)
+    {
+        await _mediator.Send(new UpdateRegionCommand { RegionDto = updatedRegionDto });
+
+        return new NoContentResult();
+    }
 }

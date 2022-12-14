@@ -12,4 +12,21 @@ public static class RegionAdapters
             Description = region.RegionDescription
         };
     }
+
+    public static Region ToRegion(this NewRegionDto newRegionDto)
+    {
+        return new Region
+        { 
+            RegionDescription = newRegionDto.Description
+        };
+    }
+
+    public static Region ToRegion(this RegionDto regionDto)
+    {
+        return new Region
+        {
+            RegionId = regionDto.Id!.Value,
+            RegionDescription = regionDto.Description
+        };
+    }
 }

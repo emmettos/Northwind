@@ -4,11 +4,11 @@ using EoSoftware.Northwind.Domain;
 
 namespace EoSoftware.Northwind.Application;
 
-public class GetSupplierQuery : IRequest<SupplierDto?>
+public class GetRegionQuery : IRequest<RegionDto?>
 {
     public short Id { get; set; }
 
-    public class Handler : IRequestHandler<GetSupplierQuery, SupplierDto?>
+    public class Handler : IRequestHandler<GetRegionQuery, RegionDto?>
     {
         private readonly INorthwindDbContext _context;
 
@@ -17,15 +17,15 @@ public class GetSupplierQuery : IRequest<SupplierDto?>
             _context = context;
         }
 
-        public async Task<SupplierDto?> Handle(GetSupplierQuery request, CancellationToken cancellationToken)
+        public async Task<RegionDto?> Handle(GetRegionQuery request, CancellationToken cancellationToken)
         {
-            var supplierDto = await _context.Set<Supplier>()
+            var regionDto = await _context.Set<Region>()
                 .AsNoTracking()
-                .Where(c => c.SupplierId == request.Id)
-                .Select(c => c.ToSupplierDto())
+                .Where(r => r.RegionId == request.Id)
+                .Select(r => r.ToRegionDto())
                 .FirstOrDefaultAsync();
 
-            return supplierDto; 
+            return regionDto;
         }
     }
 }

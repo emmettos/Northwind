@@ -19,13 +19,13 @@ public class GetCategoryQuery : IRequest<CategoryDto?>
 
         public async Task<CategoryDto?> Handle(GetCategoryQuery request, CancellationToken cancellationToken)
         {
-            var category = await _context.Set<Category>()
+            var categoryDto = await _context.Set<Category>()
                 .AsNoTracking()
                 .Where(c => c.CategoryId == request.Id)
                 .Select(c => c.ToCategoryDto())
                 .FirstOrDefaultAsync();
 
-            return category; 
+            return categoryDto; 
         }
     }
 }
