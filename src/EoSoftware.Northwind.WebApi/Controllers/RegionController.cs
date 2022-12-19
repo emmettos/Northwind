@@ -1,9 +1,11 @@
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using EoSoftware.Northwind.Application;
 
-namespace EoSoftware.Northwind.WebApi.Controllers;
+namespace EoSoftware.Northwind.WebApi;
 
+[Authorize(Roles = "Application.Admin")]
 [ApiController]
 [Route("api/region")]
 public class RegionController : ControllerBase
@@ -16,13 +18,14 @@ public class RegionController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<RegionDto>>> GetRegions()
+    public async Task<ActionResult<IEnumerable<RegionDto>>> GetRegionsAsync()
     {
         var regions = await _mediator.Send(new GetRegionsListQuery());
 
         return Ok(regions);
     }
 
+    [HttpGet("{Id}")]
     public async Task<IActionResult> GetRegionAsync(short Id)
     {
         var regionDto = await _mediator.Send(new GetRegionQuery { Id = Id });

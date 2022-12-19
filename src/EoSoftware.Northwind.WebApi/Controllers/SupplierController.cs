@@ -1,9 +1,11 @@
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using EoSoftware.Northwind.Application;
 
-namespace EoSoftware.Northwind.WebApi.Controllers;
+namespace EoSoftware.Northwind.WebApi;
 
+[Authorize(Roles = "Application.Admin, Supplier.Admin, Supplier.Specialist")]
 [ApiController]
 [Route("api/supplier")]
 public class SupplierController : ControllerBase

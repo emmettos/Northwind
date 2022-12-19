@@ -1,9 +1,11 @@
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using EoSoftware.Northwind.Application;
 
-namespace EoSoftware.Northwind.WebApi.Controllers;
+namespace EoSoftware.Northwind.WebApi;
 
+[Authorize(Roles = "Application.Admin")]
 [ApiController]
 [Route("api/category")]
 public class CategoryController : ControllerBase

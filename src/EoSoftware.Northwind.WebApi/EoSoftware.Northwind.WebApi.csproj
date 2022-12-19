@@ -15,6 +15,7 @@
     <PackageReference Include="Serilog" />
     <PackageReference Include="Serilog.AspNetCore" />
     <PackageReference Include="Hellang.Middleware.ProblemDetails" />
+    <PackageReference Include="Microsoft.Identity.Web" />
   </ItemGroup>
 
   <ItemGroup>

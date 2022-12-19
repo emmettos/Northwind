@@ -1,5 +1,8 @@
 using MediatR;
+using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Identity.Web;
+using Microsoft.IdentityModel.Logging;
 using Hellang.Middleware.ProblemDetails;
 using Serilog;
 using EoSoftware.Northwind.Application;
@@ -18,6 +21,12 @@ builder.Host.UseSerilog((context, services, configuration) =>
 
 builder.Services.AddProblemDetails();
 
+builder.Services.AddCors(policyBuilder =>
+    policyBuilder.AddDefaultPolicy(policy =>
+        policy.WithOrigins("http://localhost:4200")
+            .AllowAnyHeader()
+            .AllowAnyMethod()));
+
 builder.Services.AddDbContext<NorthwindDbContext>(options => 
 {
     options.UseNpgsql(builder.Configuration.GetConnectionString("NorthwindDbContext"));
@@ -25,6 +34,13 @@ builder.Services.AddDbContext<NorthwindDbContext>(options =>
 builder.Services.AddScoped<INorthwindDbContext>(s => s.GetService<NorthwindDbContext>()!);
 
 builder.Services.AddMediatR(typeof(GetRegionsListQuery).Assembly);
+
+builder.Services.AddMicrosoftIdentityWebApiAuthentication(builder.Configuration, "AzureAd");
+
+builder.Services.Configure<OpenIdConnectOptions>(OpenIdConnectDefaults.AuthenticationScheme, options =>
+{
+    options.TokenValidationParameters.RoleClaimType = "roles";
+});
 
 builder.Services.AddControllers();
 
@@ -35,6 +51,8 @@ builder.Services.AddSwaggerGen();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
+IdentityModelEventSource.ShowPII = true;
+
 if (!app.Environment.IsDevelopment())
 {
     app.UseProblemDetails();
@@ -53,7 +71,8 @@ app.UseSerilogRequestLogging(options =>
 //app.UseSerilogRequestLogging(); 
 
 app.UseHttpsRedirection();
-
+app.UseCors();
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
