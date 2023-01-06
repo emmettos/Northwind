@@ -43,6 +43,7 @@ public class SupplierController : ControllerBase
         return Ok(supplierDto);
     }
 
+    [Authorize(Roles = "Application.Admin, Supplier.Admin")]
     [HttpPost]
     public async Task<ActionResult<SupplierDto>> CreateSupplierAsync(NewSupplierDto newSupplierDto)
     {
