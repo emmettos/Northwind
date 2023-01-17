@@ -16,9 +16,14 @@ indent_size = 2
 
 # Code files
 [*.{cs,csx,vb,vbx}]
-indent_size =2
+indent_size = 4
 insert_final_newline = true
 charset = utf-8-bom
+
+# JSON files
+[*.json]
+indent_size = 2
+
 ###############################
 # .NET Coding Conventions     #
 ###############################
