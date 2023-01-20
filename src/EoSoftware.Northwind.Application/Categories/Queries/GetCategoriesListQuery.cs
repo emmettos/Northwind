@@ -17,9 +17,8 @@ public class GetCategoriesListQuery : IRequest<IEnumerable<CategoryDto>>
 
         public async Task<IEnumerable<CategoryDto>> Handle(GetCategoriesListQuery request, CancellationToken cancellationToken)
         {
-            return  await _context.Set<Category>()
-                .AsNoTracking()
-                .Select(c => c.ToCategoryDto())
+            return await _context.Set<Category>()
+                .Select(CategoryDto.Projection)
                 .ToListAsync(cancellationToken);
         }
     }

@@ -1,4 +1,6 @@
 using System.ComponentModel.DataAnnotations;
+using System.Linq.Expressions;
+using EoSoftware.Northwind.Domain;
 
 namespace EoSoftware.Northwind.Application;
 
@@ -17,6 +19,28 @@ public class NewSupplierDto
     public string? Phone { get; set; }
     public string? Fax { get; set; }
     public string? Homepage { get; set; }
+
+    public static Expression<Func<Supplier, SupplierDto>> Projection
+    {
+        get
+        {
+            return s => new SupplierDto()
+            {
+                Id = s.SupplierId, 
+                CompanyName = s.CompanyName,
+                ContactName = s.ContactName,
+                ContactTitle = s.ContactTitle,
+                Address = s.Address,
+                City = s.City,
+                Region = s.Region,
+                PostalCode = s.PostalCode,
+                Country = s.Country,
+                Phone = s.Phone,
+                Fax = s.Fax,
+                Homepage = s.Homepage
+            };
+        }
+    }
 }
 
 public class SupplierDto : NewSupplierDto

@@ -36,6 +36,42 @@
         "${workspaceFolder}/src/EoSoftware.Northwind.WebApi/EoSoftware.Northwind.WebApi.csproj"
       ],
       "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "build",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "build",
+        "${workspaceFolder}/src/EoSoftware.Northwind.WebApi.Customer/EoSoftware.Northwind.WebApi.Customer.csproj",
+        "/property:GenerateFullPaths=true",
+        "/consoleloggerparameters:NoSummary"
+      ],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "publish",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "publish",
+        "${workspaceFolder}/src/EoSoftware.Northwind.WebApi/EoSoftware.Northwind.WebApi.Customer.csproj",
+        "/property:GenerateFullPaths=true",
+        "/consoleloggerparameters:NoSummary"
+      ],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "watch",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "watch",
+        "run",
+        "--project",
+        "${workspaceFolder}/src/EoSoftware.Northwind.WebApi/EoSoftware.Northwind.WebApi.Customer.csproj"
+      ],
+      "problemMatcher": "$msCompile"
     }
   ]
 }

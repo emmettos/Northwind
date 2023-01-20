@@ -20,6 +20,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EoSoftware.Northwind.Persis
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EoSoftware.Northwind.WebApi", "src\EoSoftware.Northwind.WebApi\EoSoftware.Northwind.WebApi.csproj", "{71083F47-9F32-47D3-94F6-E64CC7C5AD5B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EoSoftware.Northwind.WebApi.Customer", "src\EoSoftware.Northwind.WebApi.Customer\EoSoftware.Northwind.WebApi.Customer.csproj", "{3E023E6D-144D-4E21-A33F-5F15AD2C7D19}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -78,6 +80,18 @@ Global
 		{71083F47-9F32-47D3-94F6-E64CC7C5AD5B}.Release|x64.Build.0 = Release|Any CPU
 		{71083F47-9F32-47D3-94F6-E64CC7C5AD5B}.Release|x86.ActiveCfg = Release|Any CPU
 		{71083F47-9F32-47D3-94F6-E64CC7C5AD5B}.Release|x86.Build.0 = Release|Any CPU
+		{3E023E6D-144D-4E21-A33F-5F15AD2C7D19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E023E6D-144D-4E21-A33F-5F15AD2C7D19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E023E6D-144D-4E21-A33F-5F15AD2C7D19}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3E023E6D-144D-4E21-A33F-5F15AD2C7D19}.Debug|x64.Build.0 = Debug|Any CPU
+		{3E023E6D-144D-4E21-A33F-5F15AD2C7D19}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3E023E6D-144D-4E21-A33F-5F15AD2C7D19}.Debug|x86.Build.0 = Debug|Any CPU
+		{3E023E6D-144D-4E21-A33F-5F15AD2C7D19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E023E6D-144D-4E21-A33F-5F15AD2C7D19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E023E6D-144D-4E21-A33F-5F15AD2C7D19}.Release|x64.ActiveCfg = Release|Any CPU
+		{3E023E6D-144D-4E21-A33F-5F15AD2C7D19}.Release|x64.Build.0 = Release|Any CPU
+		{3E023E6D-144D-4E21-A33F-5F15AD2C7D19}.Release|x86.ActiveCfg = Release|Any CPU
+		{3E023E6D-144D-4E21-A33F-5F15AD2C7D19}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -90,5 +104,6 @@ Global
 		{F5FB60B3-93B2-4188-BFD9-2A16D4DE7C18} = {3F6DB4AB-68E0-46B4-AD21-315052C8F95A}
 		{887AB843-3825-4A5B-AB01-00EAA651D1C0} = {3F6DB4AB-68E0-46B4-AD21-315052C8F95A}
 		{71083F47-9F32-47D3-94F6-E64CC7C5AD5B} = {3F6DB4AB-68E0-46B4-AD21-315052C8F95A}
+		{3E023E6D-144D-4E21-A33F-5F15AD2C7D19} = {3F6DB4AB-68E0-46B4-AD21-315052C8F95A}
 	EndGlobalSection
 EndGlobal

@@ -5,7 +5,7 @@
       // Use IntelliSense to find out which attributes exist for C# debugging
       // Use hover for the description of the existing attributes
       // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
-      "name": ".NET Core Launch (web)",
+      "name": ".NET Core Launch (Web Api)",
       "type": "coreclr",
       "request": "launch",
       "preLaunchTask": "build",
@@ -15,6 +15,26 @@
       "cwd": "${workspaceFolder}/src/EoSoftware.Northwind.WebApi",
       "stopAtEntry": false,
       // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
+      "serverReadyAction": {
+        "action": "openExternally",
+        "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+      },
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "sourceFileMap": {
+        "/Views": "${workspaceFolder}/Views"
+      }
+    },
+    {
+      "name": ".NET Core Launch (Customer Web Api)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/src/EoSoftware.Northwind.WebApi.Customer/bin/Debug/net6.0/EoSoftware.Northwind.WebApi.Customer.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/src/EoSoftware.Northwind.WebApi.Customer",
+      "stopAtEntry": false,
       "serverReadyAction": {
         "action": "openExternally",
         "pattern": "\\bNow listening on:\\s+(https?://\\S+)"

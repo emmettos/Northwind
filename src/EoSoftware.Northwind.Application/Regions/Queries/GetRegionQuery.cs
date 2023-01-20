@@ -19,13 +19,10 @@ public class GetRegionQuery : IRequest<RegionDto?>
 
         public async Task<RegionDto?> Handle(GetRegionQuery request, CancellationToken cancellationToken)
         {
-            var regionDto = await _context.Set<Region>()
-                .AsNoTracking()
+            return await _context.Set<Region>()
                 .Where(r => r.RegionId == request.Id)
-                .Select(r => r.ToRegionDto())
+                .Select(RegionDto.Projection)
                 .FirstOrDefaultAsync();
-
-            return regionDto;
         }
     }
 }

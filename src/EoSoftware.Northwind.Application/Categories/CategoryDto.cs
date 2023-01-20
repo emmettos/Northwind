@@ -1,4 +1,6 @@
 using System.ComponentModel.DataAnnotations;
+using System.Linq.Expressions;
+using EoSoftware.Northwind.Domain;
 
 namespace EoSoftware.Northwind.Application;
 
@@ -9,6 +11,19 @@ public class NewCategoryDto
     public string Name { get; set; } = null!;
     [Required]
     public string? Description { get; set; }
+
+    public static Expression<Func<Category, CategoryDto>> Projection
+    {
+        get
+        {
+            return c => new CategoryDto()
+            {
+                Id = c.CategoryId, 
+                Name = c.CategoryName,
+                Description = c.Description,
+            };
+        }
+    }
 }
 
 public class CategoryDto : NewCategoryDto

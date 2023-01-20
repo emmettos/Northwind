@@ -19,13 +19,10 @@ public class GetSupplierQuery : IRequest<SupplierDto?>
 
         public async Task<SupplierDto?> Handle(GetSupplierQuery request, CancellationToken cancellationToken)
         {
-            var supplierDto = await _context.Set<Supplier>()
-                .AsNoTracking()
-                .Where(c => c.SupplierId == request.Id)
-                .Select(c => c.ToSupplierDto())
+            return await _context.Set<Supplier>()
+                .Where(s => s.SupplierId == request.Id)
+                .Select(SupplierDto.Projection)
                 .FirstOrDefaultAsync();
-
-            return supplierDto; 
         }
     }
 }

@@ -4,7 +4,6 @@ public static class AppRole
 {
     public const string ApplicationAdmin = "Application.Admin";
     public const string SupplierAdmin = "Supplier.Admin";
-
     public const string SupplierSpecialist = "Supplier.Specialist";
 }
 
