@@ -1,3 +1,4 @@
+using System.Security.Claims;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -20,6 +21,8 @@ public class OrderController : ControllerBase
     [HttpGet]
     public async Task<ActionResult<IEnumerable<OrderDto>>> GetOrdersAsync()
     {
+        var userEmail = User.Claims.Where(c => c.Type == "emails").Select(c => c.Value).Single();
+
         var orders = await _mediator.Send(new GetOrdersForCustomerListQuery{ EmailAddress = "Thomas Hardy" });
 
         if (orders == null)
