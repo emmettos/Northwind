@@ -4,6 +4,7 @@ using EoSoftware.Northwind.Domain;
 
 namespace EoSoftware.Northwind.Application;
 
+
 public class NewRegionDto
 {   
     public string Description { get; set; } = null!;
